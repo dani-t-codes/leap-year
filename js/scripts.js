@@ -2,18 +2,23 @@ $(document).ready(function(event) {
   $("form#form").submit(function(event) {
     event.preventDefault();
     let year = $("input#submission").val();
-    isLeapYear(year) {
-      return false;
+    isLeapYear(year); {
+      if (year % 4 === 0) {
+        return true;
+      } else {
+        return false;
+      }
     }
-// this line runs in dev tools console after lines 5-7 : isLeapYear(1993);   
-  }
+  });
 });
 
+//Describe: isLeapYear()
  // Test1: "It returns false for years that are not a leap year"
  // Expect(isLeapYear(1967).toEqual(false);
 
 
  //Test2: "It returns true for years that *are* a leap year."
+ //Expect(isLeapYear(2004)).toEqual(true); year % 4 === 0
 
  
 //Specs for a LeapYear: 
