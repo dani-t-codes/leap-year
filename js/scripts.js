@@ -2,15 +2,15 @@ $(document).ready(function(event) {
   $("form#form").submit(function(event) {
     event.preventDefault();
     let year = $("input#submission").val();
-    isLeapYear(year); {
-      if (year % 4 === 0) {
+    isLeapYear(year) {
+      if ((year % 4 === 0) && (year % 100 !== 0)) {
         return true;
       } else {
         return false;
       }
     }
+    });
   });
-});
 
 //Describe: isLeapYear()
  // Test1: "It returns false for years that are not a leap year"
@@ -20,7 +20,10 @@ $(document).ready(function(event) {
  //Test2: "It returns true for years that *are* a leap year."
  //Expect(isLeapYear(2004)).toEqual(true); year % 4 === 0
 
- 
+ //Test3: "It returns false for years that are divisible by 100"
+ //Expect(isLeapYear2)
+
+
 //Specs for a LeapYear: 
 // The year is evenly divisible by 4; Number.isInteger(); // true
 // If the year can be evenly divided by 100, it is NOT a leap year, unless;
