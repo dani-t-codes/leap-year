@@ -16,13 +16,11 @@ $(document).ready(function(event) {
  // Test1: "It returns false for years that are not a leap year"
  // Expect(isLeapYear(1967).toEqual(false);
 
-
  //Test2: "It returns true for years that *are* a leap year."
  //Expect(isLeapYear(2004)).toEqual(true); year % 4 === 0
 
  //Test3: "It returns false for years that are divisible by 100"
  //Expect(isLeapYear2)
-
 
 //Specs for a LeapYear: 
 // The year is evenly divisible by 4; Number.isInteger(); // true
