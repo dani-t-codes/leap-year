@@ -1,14 +1,14 @@
 $(document).ready(function(event) {
   $("form#form").submit(function(event) {
     event.preventDefault();
+    $("#output").show();
     let year = $("input#submission").val();
-    isLeapYear(year) {
-      if ((year % 4 === 0) && (year % 100 !== 0)) {
-        return true;
-      } else {
-        return false;
-      }
-    }
+      if ((year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)) {
+        result = ("yes, It's a leap year") 
+      }  else {
+        result = ("No, it's not a leap year")
+      };
+      $("p").text(result);
     });
   });
 
